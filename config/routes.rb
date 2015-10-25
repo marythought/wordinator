@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :anagrams, except: [:new, :edit]
+  # resources :anagrams, except: [:new, :edit]
+  get 'anagrams/:word_1&:word_2', to: 'anagrams#show'
   resources :words, except: [:new, :edit]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
